@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-vol-container
+  labels:
+    app: myapp
+spec:
+  containers:
+    - name: myapp-vol-container
+      image: nginx:latest
+      volumeMounts:
+        - name: my-volume
+          mountPath: /etc/config
+  volumes:
+    - name: my-volume
+      configMap:
+        name: my-config
