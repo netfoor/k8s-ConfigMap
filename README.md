@@ -1,4 +1,3 @@
-```markdown
 # Kubernetes ConfigMap Project
 
 This project demonstrates how to use Kubernetes ConfigMaps to manage configuration data for applications. The project involves creating two deployments (`blue-web` and `green-web`) running Nginx servers, each configured with its own ConfigMap to serve unique `index.html` files.
