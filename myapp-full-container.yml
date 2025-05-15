@@ -1,0 +1,16 @@
+# This YAML file defines a Kubernetes Pod with a single container running an Nginx server.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-full-container
+  labels:
+    app: myapp
+spec:
+  containers:
+    - name: myapp-full-container
+      image: nginx:latest
+      ports:
+        - containerPort: 8080
+      envFrom:
+        - configMapRef:
+            name: my-config
